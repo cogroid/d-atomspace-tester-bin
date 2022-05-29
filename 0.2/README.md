@@ -4,16 +4,28 @@
 
 ### Features
 
-The app runs test cases in [Tester.java](https://github.com/cogroid/d-atomspace-tester-bin/blob/main/0.1/Tester.java)
+The app runs test cases in [Tester.java](https://github.com/cogroid/d-atomspace-tester-bin/raw/main/0.2/Tester.java)
 
 ```
 com.cogroid.atomspace.Tester tester = new com.cogroid.atomspace.Tester("/storage/emulated/0/Download/datomspace-test.txt");
 tester.testAll();
 ```
 
+The app also execute [Tests.js](https://github.com/cogroid/d-atomspace-tester-bin/raw/main/0.2/samples/Tests.js)
+
+```
+int timeout = 60000;
+String jsFile = "/storage/emulated/0/Download/jsb/Tests.js";
+String inputFile = "/storage/emulated/0/Download/jsb/input.json";
+String outputFile = "/storage/emulated/0/Download/jsb/output.json";
+
+com.cogroid.atomize.ASBRun asbRun = new com.cogroid.atomize.ASBRun();
+asbRun.exec(jsFile, timeout, inputFile, outputFile);
+```
+
 ### Install & Run
 
-1. Download [datomspace-tester.apk](https://github.com/cogroid/d-atomspace-tester-bin/raw/main/0.1/datomspace-tester.apk)
+1. Download [datomspace-tester.apk](https://github.com/cogroid/d-atomize-bin/releases/download/atomize-0.1/datomspace-tester.apk)
 
 2. Install datomspace-tester.apk (Do not run!)
 
